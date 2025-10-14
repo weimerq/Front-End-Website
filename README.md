@@ -9,20 +9,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 
-
 ## Jij
 
 <details open>
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+  Quinten Weimer
 
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
+  Blauw
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+  Responsive
  
 </details>
 
@@ -36,16 +35,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  https://www.nationalgeographic.com/
+
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Animal Profiles
+  <img src="./readme-images/animal-profiles.jpeg" width="375px" alt="Een overzicht met de profielen van verschillende soorten dieren">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
- 
+  Amphibians
+  <img src="./readme-images/amphibians.jpeg" width="375px" alt="Een detail pagina van de Surinam Toad Frog">
+  
+ <!--  NOG IMAGES TOEVOEGEN -->
+
 </details>
 
 
@@ -58,6 +60,24 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
 
+  Hij springt van h1 naar h5 en daarna komen er bijna alleen meer h2’s ookal is er een duidelijke hierarchie aanwezig in het design. Hij laat de submenu’s van de nav niet zien, je kan ze alleen klikken (werkt nu met hover) Forms snapt hij niet helemaal, video’s vind hij forms Landmarks doen raar. De pagina mist gebruik van elementen waar ze zouden moeten zijn, geen duidelijke uls, articles, etc. veel nikszeggende html.
+
+  Uit checklist:
+  - Buttons en links zijn niet descriptive genoeg
+  - HTML is niet valid
+  - Scroll area is soms te klein. Bij de categorien bv
+  - Headings zijn onlogisch
+  - List elements worden niet (goed) toegepast
+  - De pagina heeft images zonder alt
+  - Geen transcripts beschikbaar
+  - Links zoals 'animals' is niet herkenbaar als link
+  - skip link niet gevonden
+  - Geen dark of HC mode
+  - Video kan niet worden gepauzeerd als je wegscrollt.
+  - geen custom ::selection colors
+  - Geen aria labels
+
+
 </details>
 
 
@@ -67,14 +87,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details>
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
+  Ben ik nog mee bezig, ik heb de schets maar niet een IMG ervan. Krijg niet in markdown..
+
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="" width="375px" alt="breakdown van nog een dynamisch deel">
+
+<img src="./readme-images/Breakdownschets.png" alt="breakdown schets van de pagina">
 
 </details>
 
@@ -88,26 +112,49 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  HTML gaat goed, ik vind het alleen lastig om de CSS selectoren consistent te houden, het word snel een zootje en dan raak ik een beetje kwijt hoe ik alles aanspreek. Verder vind ik werken met images en grote vlakken soms lastig, de layout word snel rommelig.
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
+  
+  ## Quincy
+- Volgorde van HTML  
+- CSS border van `<li>`  
+- …  
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+## Beyzanur
+- Nav menu  
+- HTML elementen/tags  
+- Fonts  
 
+## Quinten
+- Image achter tekst  
+- List style niet aanpasbaar bij "see more"  
+- `nth-of-type(0)` lukt niet altijd  
+- Elementen omdraaien  
+- "See more" (about fish) verstoppen  
+- Link om `<h3>` heen  
+- Border color gold werkt niet op `<a>`  
+- Button borders krijg ik niet weg op de nav  
+
+## Ilias
+- Algemene feedback op HTML  
+- Wanneer `<list>`/`<article>` te gebruiken  
+- Wanneer wel/geen `<section>`  
+
+## Zakaria Yatim
+- Ziek :(  
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - h2 tot h3 niet inspringen, maar een regel skippen. 
+  - hamburger en home logo niet in li bij de nav. zijn aparte elementen.
+  - alt leeglaten bij decoratieve piccas
+  - max img width 100% bovenaan
+  - display: block, voor img background. 
+  - a11y , voor hide content. Gebruik span voor (lees meer (over kikkers))
+  - Uitgelegd hoe je met grid elementen omdraait en hoe je het plaatje erachter krijgt.
 
 </details>
 
@@ -133,14 +180,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
+quinten
+- 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Helaas nog niet gelukt om de image goed te krijgen, ik ga hier zelf nog ff mee worstelen of stuur maya berichtje op teams
+  - Elke section moet een heading hebben
+  - HTML 2e pagina binnenkort maken, helpt ook voor styling.
+  - Nog niet echt verder gekomen dmv voortgang
 
 </details>
 
@@ -229,8 +278,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. ChatGPT (vragen of de src atribute goed is gedaan)
+  2. W3C schools (hoe werkt css koppelen ook alweer?)
+  3. Img in button: https://stackoverflow.com/questions/8683528/embed-image-in-a-button-element (uiteindelijk niet gebruikt)
+  4. A11Y voor hiden van elementen ipv display:none gebruiken
+  5. Reddit voor: button styling, figcaption, ...
+  6. Voor de dieren categorien heb ik chatgpt gebruikt, hij heeft me geholpen met display block, relative, zodat alles mooi op 1 plek kwam
+  7. Vriend van mn moeder heeft me geholpen met de juiste tags voor de dieren categorien, ik heb  figure gebruikt. ik snap waarom!
+  8. Chatgpt heeft me het icoontje bij see more aangeleverd. 
+  9. ik heb MDN gebruikt voor veel kleine vraagjes tussendoor, meer om even te herinneren hoe ik moest opschrijven wat ik wou doen.
+  10. Codepennetjes van Sanne voor hamburger menu heb ik gebruikt als inspo voor mijn eigen menu
+  11. Maja heeft me geholpen met het centreren en goed gebruik van flex bij de dieren categorien
+  12. Chatgpt heeft me object fit cover uitgelegd zodat de images niet zo stretchen.
 
 </details>

@@ -1,0 +1,228 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+:root {
+	--gold: rgb(255, 203, 9);
+	--text-primary: black;
+	--text-secondary: white;
+	--background-primary: whitesmoke;
+	--background-secundary: black;
+	--background-tertiary: white;
+  }
+
+  
+  @font-face {
+	  font-family: "geo";
+	  src: url("../fonts/regular.woff2");
+	  font-weight: 400;
+	  font-style: normal;
+	}
+	
+	@font-face {
+	  font-family: "geo";
+	  src: url("../fonts/bold.woff2");
+	  font-weight: 700;
+	  font-weight: bold;
+	}
+	
+	@font-face {
+	  font-family: "geo";
+	  src: url("../fonts/medium.woff2");
+	  font-weight: 500;
+	  /* font-weight: medium;  WERKT NIET? */
+	}
+	
+	@font-face {
+	  font-family: "geo";
+	  src: url("../fonts/italic.woff2");
+	  font-weight: 400;
+	  font-style: italic;
+	}
+  
+  
+  
+  body {
+	  margin: 0em;
+	}
+  
+  main {
+	  font-family: "geo";
+  }
+  
+  a:hover {
+	background-color: white;
+	transition: 0.5s;
+  }
+  
+  ::selection {
+	background-color: rgb(57, 179, 255);
+	opacity: 75%;
+  }
+  
+  
+  /* Header nav */
+  
+  header ul {
+  
+	translate: -100%;
+	position: absolute;
+	z-index: 10;
+	font-family: "geo";
+	color: rgb(0, 0, 0);
+	width: 110vw;
+	height: 100vh;
+	margin-left: 2em;
+	padding: 0em;
+	list-style: none;
+	max-width: 100%;
+  }
+  
+  header a:hover {
+	color: var(--gold);
+	transition: none;
+  }
+  
+  header li {
+	border-bottom-style: solid;
+	border-color: lightgray;
+	margin: 1em;
+	margin: 3em;
+	font-size: 1em;
+	padding-bottom: 2em;
+	font-weight: 500;
+  }
+  
+  header li:first-of-type {
+	margin-top: 4em;
+  }
+  
+  header a {
+	text-decoration: none;
+	color: black;
+  }
+  
+  .is-open {
+	translate: -7.2%;
+	top: -2.5%;
+	background-color: white;
+  
+  }
+  
+  nav {
+	display: flex;
+	justify-content: space-between;
+	margin-left: 1em;
+	margin-right: 1em;
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+	
+  }
+  
+  nav button:first-of-type {
+	order: -1;
+  }
+  
+  nav img {
+	  height: 1.7em;
+  }
+  
+  
+  nav button {
+	border: none;
+	background: none;
+	margin: 0;
+	height: 1.7em;
+	width: 1.7em;
+  }
+  
+  nav button:first-of-type {
+	background-image: url("../images/menuicon.svg");
+	background-size: 1.7em 1.7em;
+	background-repeat: no-repeat;
+  }
+  
+  .show-close-icon {
+	background-image: url("../images/closeicon.svg") !important;
+	z-index: 50;
+  }
+  
+  /* Imprtant mocht van Maja, maar beteje valspelen denk ik */
+  
+  /*  voor alle links in de main algemene styling */
+  
+  main a {
+	font-size: 0.8em;
+	color: black;
+	text-transform: uppercase;
+	font-weight: 500;
+	text-decoration: none;
+	border-color: var(--gold);
+	background-color: var(--gold);
+	padding: 1em;
+	letter-spacing: 0.2em;
+  }
+  
+  
+	/* MEDIA QUERIES */
+  
+	@media (min-width: 1100px) {
+  
+	  /* Uitklappen burger menu */
+	  header ul {
+		translate: 0%;
+		position: static;
+		background: none;
+		padding: 0;
+		display: flex;
+		height: 1.7em ;
+		border: none;
+		align-items: center;
+	
+  
+	  }
+  
+	  header a {
+		align-self: center;
+	  }
+  
+	  /* Proberen search aan rechterkant te krijgen */
+	  header nav button:nth-of-type(2) {
+		align-self: center;
+  
+	  }
+  
+	  /* Hamburger icoon weg */
+	  header button:first-of-type {
+		display: none;
+  
+	  }
+  
+	  header button:nth-of-type(2) {
+		order: 1;
+		
+	  }
+  
+	  header li {
+		border: none;
+		background-color: white;
+		margin: 0em;
+		padding: 1em;
+	  }
+  
+	  header li:first-of-type {
+		margin-top: 0em;
+	  }
+  
+	
+	}
+  
+	

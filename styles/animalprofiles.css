@@ -1,0 +1,310 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+
+:root {
+    --gold: rgb(255, 203, 9);
+    --text-primary: black;
+    --text-secondary: white;
+    --background-primary: whitesmoke;
+    --background-secundary: black;
+    --background-tertiary: white;
+  }  
+
+* {
+	box-sizing:border-box;	
+}
+
+
+main {
+    overflow-x: hidden;
+}
+
+main img {
+    width: 100vw;
+}
+
+
+/* HERO */
+
+
+section:first-of-type {
+    position: relative;
+    text-align: center;
+    color: var(--text-secondary);
+    background-color: var(--background-primary);
+ 
+  }
+  
+  section:first-of-type img {
+    width: 200vw;
+    height: 100vh;
+    display: block;
+    object-fit: cover;
+  }
+  
+  section:first-of-type h1 {
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    width: 85%;
+    letter-spacing: 0.1em;
+  }
+  
+ section:first-of-type a {
+    position: absolute;
+    top: 28%;
+    transform: translate(-50%, -50%);
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+
+  }
+  
+section:first-of-type p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    width: 85%;
+    line-height: 1.4;
+    text-align: center;
+  }
+  
+  section:first-of-type figcaption {
+    font-size: 0.75em;
+    text-align: left;
+    text-transform: uppercase;
+    color: rgb(114, 114, 114);
+    background-color: white;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.3em;
+    padding-top: 1em;
+
+  }
+  
+
+  /* DIEREN CATEGORIES */
+
+section:nth-of-type(2) {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    background-color: var(--background-primary);
+}
+section:nth-of-type(2) ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em 2em;
+    justify-items: center;
+    justify-items: space-around;
+    max-width: min-content;
+    list-style: none;
+    padding: 0em;
+
+
+  }
+  
+
+section:nth-of-type(2) article {
+    position: relative;
+    width: 320px;
+    height: 450px;
+  }
+
+
+  section:nth-of-type(2) figure {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+section:nth-of-type(2) img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* chatgpt . Hoe zorg dat de image niet stretched over het hele blok heen(+ bijgevoegde foto en code)*/
+    display: block;
+  }
+  
+section:nth-of-type(2) figcaption {
+    /* figcap was het enige dat lukt e om te gebruiken */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-secondary);
+    text-align: center;
+  }
+  
+ section:nth-of-type(2) h2 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+  }
+
+
+/* VIDEO SECTION */
+
+
+
+section:nth-of-type(3) {
+    color: var(--text-secondary);
+    background-color: var(--background-secundary);
+}
+
+section:nth-of-type(3) h2 {
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 1.5em;
+    font-size: 2em;
+}
+
+section:nth-of-type(3) ul {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    gap:1em;
+    padding-left: 2em;
+
+}
+
+/* Hier werkt scrollniet */
+
+
+section:nth-of-type(3) ul {
+    display: flex;
+    justify-content: center;
+    padding-left: 5vw;
+
+}
+
+section:nth-of-type(3) li {
+    width:12em;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+section:nth-of-type(3) img {
+    width: 12em;
+    order: -1;
+}
+
+
+/* Grote video met Smilodon */
+
+section:nth-of-type(3) article {
+    display: flex;
+    flex-direction: column;
+}
+
+section:nth-of-type(3) article h3 {
+    text-transform: uppercase ;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 0em;
+    letter-spacing: 0.2em;
+    font-size: 1.3em;
+
+}
+
+section:nth-of-type(3) article img {
+    align-self: center;
+    width: 75vw;
+    max-width: 70em;
+
+}
+
+
+  /* MEDIA QUERIES */
+
+  @media (min-width: 700px) {
+
+    /* HERO */
+    section:first-of-type h1 {
+      font-size: 2em;
+      width: 60%;
+    }
+
+    section:first-of-type p {
+      width: 55%;
+      font-size: 1.1em;
+      
+    }
+
+    section:nth-of-type(2) ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: var(--background-primary);
+        gap: 2em;
+        padding: 1.5em;
+        align-items: center;
+      }
+
+}
+
+@media (min-width: 950px) {
+
+    /* HERO */
+    section:first-of-type h1 {
+      font-size: 2.5em;
+      width: 60%;
+    }
+
+    section:first-of-type p {
+      width: 55%;
+      font-size: 1.2em;
+    }
+
+    section:nth-of-type(2) ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: var(--background-primary);
+        gap: 2em;
+        padding: 1.5em;
+        align-items: center;
+      }
+}
+
+
+@media (min-width: 1300px) {
+
+    /* HERO */
+    section:first-of-type h1 {
+      font-size: 2.5em;
+      width: 50%;
+    }
+
+    section:first-of-type p {
+      width: 55%;
+      font-size: 1.3em;
+    }
+
+}
+
+
+
