@@ -174,14 +174,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  ## Quinten
+- Image blijft maar een horizontal scroll hebben, overflow werkt niet. De hero is nog niet hoe ik hem wil hebben
+- Lukt niet om elementen in mijn section aan te spreken. Lijkt alsof ze niet reageren
 
-quinten
-- 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
@@ -283,11 +279,9 @@ quinten
   3. Img in button: https://stackoverflow.com/questions/8683528/embed-image-in-a-button-element (uiteindelijk niet gebruikt)
   4. A11Y voor hiden van elementen ipv display:none gebruiken
   5. Reddit voor: button styling, figcaption, ...
-  6. Voor de dieren categorien heb ik chatgpt gebruikt, hij heeft me geholpen met display block, relative, zodat alles mooi op 1 plek kwam
-  7. Vriend van mn moeder heeft me geholpen met de juiste tags voor de dieren categorien, ik heb  figure gebruikt. ik snap waarom!
   8. Chatgpt heeft me het icoontje bij see more aangeleverd. 
-  9. ik heb MDN gebruikt voor veel kleine vraagjes tussendoor, meer om even te herinneren hoe ik moest opschrijven wat ik wou doen.
-  10. Codepennetjes van Sanne voor hamburger menu heb ik gebruikt als inspo voor mijn eigen menu
+  9. ik heb MDN gebruikt om te controleren hoe ik bepaalde tags gebruik: 
+  10. Codepennetjes van Sanne voor hamburger menu heb ik gebruikt als inspo voor mijn eigen menu, gaat puur om JS.
   11. Maja heeft me geholpen met het centreren en goed gebruik van flex bij de dieren categorien
   12. Chatgpt heeft me object fit cover uitgelegd zodat de images niet zo stretchen.
 
