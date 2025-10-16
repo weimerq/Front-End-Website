@@ -168,7 +168,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik loop enorm vast bij positionering en mijn code is heel rommelig nog. 
 
 
   ### Agenda voor meeting
@@ -185,7 +185,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Helaas nog niet gelukt om de image goed te krijgen, ik ga hier zelf nog ff mee worstelen of stuur maya berichtje op teams
   - Elke section moet een heading hebben
   - HTML 2e pagina binnenkort maken, helpt ook voor styling.
-  - Nog niet echt verder gekomen dmv voortgang
+  - CSS Aanspreeksfoutje opgelost
 
 </details>
 
@@ -213,18 +213,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  gaat steeds beter, heb weer een beetje vertrouwen terug gewonnen. Nu gewoon kwestie van aan de bak gaan.
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
+   ## Quinten
+- Hoe krijg ik mooi drie streepjes voor een "see more" of bij een "read" . 
+- Search icon interactief maken , meer to-do geen vraag
+- Github website uploaden lukt niet, index.html verwijderen?
+- Krijg nav artikelen niet in het midden
+- Ik wil de articles alsnog clickable maken maar niet het element een link maken. Kan ik dit met media query doen?
+- Header sticky werkt niet
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen

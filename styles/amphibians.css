@@ -10,10 +10,13 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
-}
+    --gold: rgb(255, 203, 9);
+    --text-primary: black;
+    --text-secondary: white;
+    --background-primary: whitesmoke;
+    --background-secundary: black;
+    --background-tertiary: white;
+  }  
 
 
 

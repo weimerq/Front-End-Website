@@ -18,24 +18,23 @@
     --background-primary: whitesmoke;
     --background-secundary: black;
     --background-tertiary: white;
+    --text-tertiary: rgb(114, 114, 114);
   }  
 
-* {
-	box-sizing:border-box;	
-}
+
+
 
 
 main {
     overflow-x: hidden;
 }
 
-main img {
-    width: 100vw;
-}
 
-
+/* -------------------------------- */
 /* HERO */
+/* -------------------------------- */
 
+/* Heb toch geen grid gebruikt, maar met position absolute dingen erop geplaatst */
 
 section:first-of-type {
     position: relative;
@@ -44,12 +43,17 @@ section:first-of-type {
     background-color: var(--background-primary);
  
   }
+
+section:first-of-type figure {
+  margin: 0;
+}
   
   section:first-of-type img {
     width: 200vw;
     height: 100vh;
     display: block;
     object-fit: cover;
+    /* Hoe zorg ik dat de afbeelding zich niet uitrekt maar meebeweegt en schaalt als ik het formaat van het scherm verander (+ bijgevoegd screenshot en code), chatgpt gaf me object:cover , en heb die gebruikt en bestudeerd */
   }
   
   section:first-of-type h1 {
@@ -68,13 +72,22 @@ section:first-of-type {
   
  section:first-of-type a {
     position: absolute;
-    top: 28%;
+    top: 30%;
     transform: translate(-50%, -50%);
     padding-right: 1.5em;
     padding-left: 1.5em;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 0.5em;
+    background: none;
+    color: var(--text-secondary);
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    text-decoration: underline;
+    
 
   }
-  
+
 section:first-of-type p {
     position: absolute;
     top: 50%;
@@ -88,19 +101,38 @@ section:first-of-type p {
   }
   
   section:first-of-type figcaption {
-    font-size: 0.75em;
+    font-size: 0.7em;
     text-align: left;
     text-transform: uppercase;
-    color: rgb(114, 114, 114);
-    background-color: white;
-    padding: 0.5rem 1rem;
+    color: var(--text-tertiary);
+    background-color: var(--background-tertiary);
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    padding-left: 2em;
     letter-spacing: 0.3em;
     padding-top: 1em;
 
   }
   
+  
+/* -------------------------------- */
+/* DIEREN CATEGORIEN */
+/* -------------------------------- */
 
-  /* DIEREN CATEGORIES */
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ Link die Bahaa deelde. Zodat ik de dieren categorien wel een titel geef*/
+
+section:nth-of-type(2) h2 {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* De hele section in het midden krijgen */
 
 section:nth-of-type(2) {
     display: flex;
@@ -108,43 +140,55 @@ section:nth-of-type(2) {
     justify-content: center;
     background-color: var(--background-primary);
 }
+
+
+/* Grid die ik responisve kan maken */
+
+
 section:nth-of-type(2) ul {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2em 2em;
-    justify-items: center;
-    justify-items: space-around;
-    max-width: min-content;
-    list-style: none;
-    padding: 0em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em 2em;
+  justify-items: center;
+  max-width: min-content;
+  list-style: none;
+  padding: 0em;
 
 
-  }
+}
   
+/* Relative article, zodat ik met position absolute items erop kan krijgen die absolute staan in de parent */
 
 section:nth-of-type(2) article {
     position: relative;
-    width: 320px;
-    height: 450px;
+    width: 20em;
+    height: 25em;
+    /* width: 320px;
+    height: 450px; */
   }
 
+
+  /* Zodat hij overlapt met de article */
 
   section:nth-of-type(2) figure {
     margin: 0;
     width: 100%;
     height: 100%;
   }
+
+
   
 section:nth-of-type(2) img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* chatgpt . Hoe zorg dat de image niet stretched over het hele blok heen(+ bijgevoegde foto en code)*/
-    display: block;
+    /* chatgpt : Hoe zorg dat de image niet stretched over het hele blok heen(+ bijgevoegde foto en code)*/
   }
+
+/* De link en titel netjes alignen op het article/figure */
   
 section:nth-of-type(2) figcaption {
-    /* figcap was het enige dat lukt e om te gebruiken */
+    /* Figcaption want de achtergrond afbeelding is een figuur, de titel zegt er wat over */
     position: absolute;
     top: 0;
     right: 0;
@@ -158,89 +202,241 @@ section:nth-of-type(2) figcaption {
     text-align: center;
   }
   
- section:nth-of-type(2) h2 {
+ section:nth-of-type(2) h3 {
     font-size: 1.8rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 2rem;
   }
 
+  section:nth-of-type(2) a::before {
+    content: "☰";
+    padding-right: 0.35em;
+  }
 
+
+
+/* -------------------------------- */
 /* VIDEO SECTION */
+/* -------------------------------- */
 
 
+section:nth-of-type(3) h2 {
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+  font-weight: 500;
+
+}
 
 section:nth-of-type(3) {
     color: var(--text-secondary);
     background-color: var(--background-secundary);
+    display:flex;
+	flex-direction:column;
+	align-items:center;
 }
 
-section:nth-of-type(3) h2 {
-    text-transform: uppercase;
-    text-align: center;
-    padding-top: 1.5em;
-    font-size: 2em;
-}
+/* Zorgt dat de twee uls allebei zelfde breedte hebben en een flex voor direction geven en hidden + scroll */
 
 section:nth-of-type(3) ul {
-    display: flex;
+  width:95vw;
+	margin:0;
+	padding-left: 0.5em;
+	display:flex;
+	overflow:hidden;
+  max-width: 55em;
+
+}
+
+/* Alleen de nav ul een scroll geven */
+
+section:nth-of-type(3) nav ul {
     flex-direction: row;
     overflow-x: scroll;
-    gap:1em;
-    padding-left: 2em;
-
+    
 }
 
-/* Hier werkt scrollniet */
 
+/* Flex shrink zodat flex de woorden niet samenperst */
 
-section:nth-of-type(3) ul {
-    display: flex;
-    justify-content: center;
-    padding-left: 5vw;
-
+section:nth-of-type(3) nav li {
+    width: 12em;
+    flex-shrink: 0;
+    height: 10em;
+    max-width: 10em;
 }
+
+section:nth-of-type(3) a {
+  color: var(--text-secondary);
+  text-transform: none;
+  letter-spacing: normal;
+  background: none;
+  flex-shrink: 0;
+  padding: 0;
+  max-width: 12em;
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
+
+section:nth-of-type(3) a:hover img {
+  background-color: var(--gold);
+  transition: 0.3s;
+}
+
+
+/* Zodat ik de images mooi met flex direction column bovenop elkaar kan zetten */
 
 section:nth-of-type(3) li {
-    width:12em;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  flex-shrink: 0;
+}
+
+section:nth-of-type(3) nav ul:first-of-type img {
+  width: 12em;
+  height: auto;
+  padding-bottom: 0.4em;
+}
+
+/* Code voor grote li item onder de nav ul */
+
+
+section:nth-of-type(3)>ul li {
+  width: 55em;
+}
+
+section:nth-of-type(3)>ul li img {
+  width: 55em;
+  max-width: 100vw;
+  height: auto;
+}
+
+section:nth-of-type(3) h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 1em;
+  margin-bottom: 0.2em;
+  max-width: 90vw;
+}
+
+section:nth-of-type(3) p {
+  margin-top: 0.2em;
+  padding-bottom: 4em;
+  max-width: 90vw;
+}
+
+
+/* -------------------------------- */
+/* ARTIKELEN SECTION */
+/* -------------------------------- */
+
+section:nth-of-type(4) h2 {
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 1.5em;
+}
+
+section:nth-of-type(4) a {
+  color: var(--text-primary);
+  text-transform: none;
+  letter-spacing: normal;
+  background: none;
+  flex-shrink: 0;
+  padding: 0;
+  padding-top: 1em;
+}
+
+
+/* Grid maken voor card design  */
+
+
+section:nth-of-type(4) {
+  background-color: var(--background-primary);
+}
+
+section:nth-of-type(4) li {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 2em;
+  background-color: var(--background-tertiary);
+  margin: 2em;
+  max-height: 13em;
+}
+
+section:nth-of-type(4) img {
+  grid-row: 1/4;
+  grid-column:  1/2;
+  height: 13em;
+
+  object-fit: cover;
 
 }
 
-section:nth-of-type(3) img {
-    width: 12em;
-    order: -1;
+section:nth-of-type(4) ul {
+  padding: 0em;
 }
 
-
-/* Grote video met Smilodon */
-
-section:nth-of-type(3) article {
-    display: flex;
-    flex-direction: column;
+section:nth-of-type(4) h3 {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  padding: 0em;
+  margin: 0em;
+  font-weight: 500;
+  max-width: 20em;
+  padding-right: 2.5em;
 }
 
-section:nth-of-type(3) article h3 {
-    text-transform: uppercase ;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-bottom: 0em;
-    letter-spacing: 0.2em;
-    font-size: 1.3em;
-
-}
-
-section:nth-of-type(3) article img {
-    align-self: center;
-    width: 75vw;
-    max-width: 70em;
+/* Read link */
+section:nth-of-type(4) a:first-of-type {
+  grid-row-start: 3;
+  grid-column-start: 2;
+  padding-top: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7em;
 
 }
 
+section:nth-of-type(4) a:first-of-type::before {
+  content: "☰";
+  padding-right: 0.35em;
+}
 
-  /* MEDIA QUERIES */
+
+/* Animals link */
+section:nth-of-type(4) a:nth-of-type(2) {
+  padding-top: 2em;
+  grid-row-start: 1;
+  grid-column-start: 2;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7em;
+  text-decoration: underline;
+
+}
+
+section:nth-of-type(4) nav {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  max-width: 55em;
+
+}
+
+
+/* -------------------------------- */
+/* MEDIA QUERIES */
+/* -------------------------------- */
+
+
+
+/* Meeschalen  van titel en p + grid van categorien aanpassen */
 
   @media (min-width: 700px) {
 
@@ -263,11 +459,17 @@ section:nth-of-type(3) article img {
         gap: 2em;
         padding: 1.5em;
         align-items: center;
+
+
       }
+
+
 
 }
 
-@media (min-width: 950px) {
+/* Meeschalen  van titel en p + grid van categorien aanpassen */
+
+@media (min-width: 1100px) {
 
     /* HERO */
     section:first-of-type h1 {
@@ -290,6 +492,7 @@ section:nth-of-type(3) article img {
       }
 }
 
+/* Meeschalen  van titel en p */
 
 @media (min-width: 1300px) {
 
@@ -306,5 +509,49 @@ section:nth-of-type(3) article img {
 
 }
 
+/* De artikelen responsive maken als ze kleiner worden  */
 
+@media (max-width: 700px) {
+
+  section:nth-of-type(4) a {
+    visibility: hidden;
+  }
+  
+  section:nth-of-type(4) li {
+    font-size: 0.9em;
+    max-height: 9em;
+    grid-template-columns: 1fr 4fr;
+    overflow: hidden;
+  }
+
+  section:nth-of-type(4) h3 {
+    padding-right: 1em;
+  }
+
+
+  
+  section:nth-of-type(4) li img {
+    width: 12em;
+    height: auto;
+  }
+  
+  }
+
+
+/* tekst in artikel nog kleiner */
+
+  @media (max-width: 500px) {
+
+    section:nth-of-type(4) li {
+      font-size: 0.7em;
+      position: relative;
+    }
+
+    section:nth-of-type(4) h3 {
+      position: absolute;
+      top: -30%;
+    }
+
+
+  }
 
